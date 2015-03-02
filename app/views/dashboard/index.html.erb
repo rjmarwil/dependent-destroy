@@ -5,12 +5,14 @@
   <thead>
   <tr>
     <th>Name</th>
+    <th>Total Prescriptions</th>
   </tr>
   </thead>
   <tbody>
   <% @patients.each do |patient| %>
     <tr>
       <td><%= link_to full_name(patient), patient %></td>
+      <td><%= patient.prescriptions.count %></td>
     </tr>
   <% end %>
   </tbody>
