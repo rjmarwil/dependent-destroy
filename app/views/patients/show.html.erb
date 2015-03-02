@@ -1,4 +1,4 @@
-<h1><%= @patient.full_name %></h1>
+<h1><%= @patient.full_name %></h1><%= link_to 'Delete', patient_path(@patient), method: :delete, data: { confirm: 'Are you sure?' } %>
 <h2>Prescriptions</h2>
 <%= link_to "Add Prescription", new_patient_prescription_path(@patient) %>
 
